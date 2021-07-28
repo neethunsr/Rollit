@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 void main() {
   return runApp(
     MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.greenAccent,
+        backgroundColor: Colors.tealAccent[700],
         appBar: AppBar(
-          title: Text('Dicee'),
-          backgroundColor: Colors.greenAccent,
+          title: Center(
+              child: Text(
+            'Roll-It!',
+            style: TextStyle(color: Colors.tealAccent[700]),
+          )),
+          backgroundColor: Colors.white,
         ),
         body: DicePage(),
       ),
@@ -15,7 +20,21 @@ void main() {
   );
 }
 
-class DicePage extends StatelessWidget {
+class DicePage extends StatefulWidget {
+  @override
+  _DicePageState createState() => _DicePageState();
+}
+
+class _DicePageState extends State<DicePage> {
+  int leftDiceValue = 1;
+  int rightDiceValue = 1;
+  void rollDice() {
+    setState(() {
+      leftDiceValue = Random().nextInt(6) + 1;
+      rightDiceValue = Random().nextInt(6) + 1;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -23,15 +42,19 @@ class DicePage extends StatelessWidget {
         children: <Widget>[
           Expanded(
             //Takes up maximum available space in a row/column
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Image.asset('images/dice1.png'),
+            child: TextButton(
+              onPressed: () {
+                rollDice();
+              },
+              child: Image.asset('images/dice$leftDiceValue.png'),
             ),
           ),
           Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Image.asset('images/dice1.png'),
+            child: TextButton(
+              onPressed: () {
+                rollDice();
+              },
+              child: Image.asset('images/dice$rightDiceValue.png'),
             ),
           ),
         ],
