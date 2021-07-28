@@ -18,10 +18,24 @@ void main() {
 class DicePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: <Widget>[
-        Image(image: AssetImage('images/dice1.png')),
-      ],
+    return Center(
+      child: Row(
+        children: <Widget>[
+          Expanded(
+            //Takes up maximum available space in a row/column
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset('images/dice1.png'),
+            ),
+          ),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset('images/dice1.png'),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
