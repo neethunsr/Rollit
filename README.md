@@ -1,7 +1,7 @@
-![App Brewery Banner](https://github.com/neethunsr/main/app-demo.jpg)
+![App Brewery Banner](https://github.com/neethunsr/Rollit/main/app-demo.jpg)
 
 
-# Dicee 🎲
+# Rollit 🎲
 
 ## Our Goal
 
