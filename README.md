@@ -1,4 +1,4 @@
-![App Brewery Banner](https://github.com/neethunsr/Rollit/main/app-demo.jpg)
+![Rollit](app-demo.jpg)
 
 
 # Rollit 🎲
