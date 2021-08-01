@@ -1,5 +1,5 @@
 ![Rollit](app-demo.jpg)
-
+<img src="app-demo.jpg" width="100" />
 
 # Rollit 🎲
 
